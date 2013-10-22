@@ -14,12 +14,16 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  sites = [a,b,c].sort!
+  raise TriangleError if sites[0] == 0
+  raise TriangleError if sites[0] + sites[1] <= sites[2]
+
   if a == b && b == c
-		:equilateral
-  elsif a == b || b == c || a ==c
-		:isosceles
+    :equilateral
+  elsif a == b || b == c || a == c
+    :isosceles
   else
-		:scalene
+    :scalene
   end
 end
 
