@@ -51,8 +51,6 @@ class AboutProxyObjectProject < Neo::Koan
     # NOTE: The Television class is defined below
     tv = Proxy.new(Television.new)
 
-    # HINT: Proxy class is defined above, may need tweaking...
-
     assert tv.instance_of?(Proxy)
   end
 
